@@ -38,7 +38,7 @@ const Mask = ({ width, height, shape }) => {
         />
       );
 
-    case "MdRectangle":
+    case "FaSquareFull":
       return (
         <Rect
           x={centerX / 2}
@@ -133,6 +133,28 @@ const Mask = ({ width, height, shape }) => {
           globalCompositeOperation="destination-out"
           stroke="white"
           strokeWidth={2}
+        />
+      );
+
+    case "BsFillHeartbreakFill":
+      return (
+        <Shape
+          sceneFunc={(ctx, shape) => {
+            const scale = Math.min(width, height) / 16;
+            ctx.save();
+            ctx.translate(centerX, centerY + 10);
+            ctx.scale(scale, scale);
+            ctx.translate(-8, -8);
+            const path = new Path2D(
+              "M8.931.586 7 3l1.5 4-2 3L8 15C22.534 5.396 13.757-2.21 8.931.586ZM7.358.77 5.5 3 7 7l-1.5 3 1.815 4.537C-6.533 4.96 2.685-2.467 7.358.77Z"
+            );
+            ctx.fill(path);
+            ctx.restore();
+          }}
+          fill="black"
+          globalCompositeOperation="destination-out"
+          stroke="white"
+          strokeWidth={1}
         />
       );
 

@@ -10,6 +10,7 @@ import {
   FaCircle,
   FaHeartbeat,
   FaHeartBroken,
+  FaSquareFull,
   FaHeart,
   FaStar,
 } from "react-icons/fa";
@@ -52,8 +53,8 @@ const NewCropper = () => {
       icon: <FaCircle />,
     },
     {
-      name: "MdRectangle",
-      icon: <MdRectangle />,
+      name: "FaSquareFull",
+      icon: <FaSquareFull />,
     },
     {
       name: "FaStar",

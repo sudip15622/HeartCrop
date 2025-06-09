@@ -3,7 +3,7 @@ import { createCanvas, loadImage } from "canvas";
 export const getCroppedMaskedImage = async (
   imageSrc,
   crop,
-  shape = "FaCircle",
+  shape = "FaHeart",
   outputSize = 400
 ) => {
   const image = await loadImage(imageSrc);
@@ -37,15 +37,12 @@ export const getCroppedMaskedImage = async (
       ctx.arc(outputSize / 2, outputSize / 2, outputSize / 2, 0, Math.PI * 2);
       break;
 
-    case "MdRectangle":
+    case "FaSquareFull":
       ctx.rect(0, 0, outputSize, outputSize);
       break;
 
     case "FaStar":
-      const drawStar = (cx, cyPre, spikes, outerRadiusPre, innerRadiusPre) => {
-        let outerRadius = outerRadiusPre + 10;
-        let innerRadius = innerRadiusPre + 10;
-        let cy = cyPre + 20;
+      const drawStar = (cx, cy, spikes, outerRadius, innerRadius) => {
         let rot = (Math.PI / 2) * 3;
         let x = cx;
         let y = cy;
@@ -67,10 +64,10 @@ export const getCroppedMaskedImage = async (
       };
       drawStar(
         outputSize / 2,
-        outputSize / 2,
+        (outputSize / 2)+20,
         5,
-        outputSize / 2,
-        outputSize / 4
+        (outputSize / 2) + 10,
+        (outputSize / 4) + 10
       );
       break;
 
@@ -128,6 +125,20 @@ export const getCroppedMaskedImage = async (
       ctx.scale(scale, scale);
       ctx.translate(-256, -256);
       ctx.fill(heartCrackPath);
+      ctx.restore();
+      return canvas.toDataURL("image/png");
+    }
+
+    case "BsFillHeartbreakFill": {
+      const path = new Path2D(
+        "M8.931.586 7 3l1.5 4-2 3L8 15C22.534 5.396 13.757-2.21 8.931.586ZM7.358.77 5.5 3 7 7l-1.5 3 1.815 4.537C-6.533 4.96 2.685-2.467 7.358.77Z"
+      );
+      const scale = outputSize / 16;
+      ctx.save();
+      ctx.translate(outputSize / 2, (outputSize / 2) + 10);
+      ctx.scale(scale, scale);
+      ctx.translate(-8, -8);
+      ctx.fill(path);
       ctx.restore();
       return canvas.toDataURL("image/png");
     }
