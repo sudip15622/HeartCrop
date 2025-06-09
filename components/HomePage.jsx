@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import NewCropper from "./NewCropper";
-// import ImageCropper from "./ImageCropper";
 
 const HomePage = () => {
   return (
