@@ -1,0 +1,22 @@
+{
+  "Navbar": {
+    "languages": {
+      "en": "Englisch",
+      "de": "Deutsch",
+      "es": "Spanisch",
+      "fr": "Französisch",
+      "pt": "Portugiesisch",
+      "it": "Italienisch",
+      "hi": "Hindi"
+    },
+    "title": "HeartCrop"
+  },
+  "Home": {
+    "title": "Schneiden Sie online ein herzförmiges Foto zu",
+    "tips": "Zoomen und ziehen, um den gewünschten Inhalt innerhalb der Form zu erhalten.",
+    "upload": "Foto hochladen",
+    "change": "Foto ändern",
+    "download": "Foto herunterladen",
+    "zoom": "Zoomen"
+  }
+}

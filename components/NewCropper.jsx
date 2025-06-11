@@ -4,6 +4,7 @@ import { Slider, Button } from "@mui/material";
 import Cropper from "react-easy-crop";
 import { Stage, Layer, Rect, Circle, Star } from "react-konva";
 import { getCroppedMaskedImage } from "@/utils/cropAndMask";
+import { useTranslations } from "next-intl";
 
 import {
   FaCloudUploadAlt,
@@ -22,6 +23,7 @@ import { FaHeartCrack } from "react-icons/fa6";
 import Mask from "./Mask";
 
 const NewCropper = () => {
+  const t = useTranslations("Home");
   const defaultImage = "/doggy.jpg";
   const [imageSrc, setImageSrc] = useState(null);
   const [croppedAreaPixels, setCroppedAreaPixels] = useState(null);
@@ -114,8 +116,12 @@ const NewCropper = () => {
       <div className="flex flex-col gap-y-5 w-full">
         <div className="flex items-center justify-between gap-x-10 pb-5 border-b-1 border-gray-300">
           <div className="flex flex-row gap-x-2 items-center text-gray-500">
-            <span className="flex items-center justify-center text-xl"><MdOutlineTipsAndUpdates /></span>
-            <span className="">Zoom and drag to get the desired content inside shape.</span>
+            <span className="flex items-center justify-center text-xl">
+              <MdOutlineTipsAndUpdates />
+            </span>
+            <span className="">
+              {t("tips")}
+            </span>
           </div>
           <div className="flex items-center justify-between gap-x-10">
             <input
@@ -130,7 +136,7 @@ const NewCropper = () => {
               onClick={() => inputRef.current?.click()}
               startIcon={<FaCloudUploadAlt />}
             >
-              {imageSrc ? "Change Photo" : "Upload Photo"}
+              {imageSrc ? t("change") : t("upload")}
             </Button>
             {imageSrc && (
               <Button
@@ -139,7 +145,7 @@ const NewCropper = () => {
                 startIcon={<IoMdDownload />}
                 color="success"
               >
-                Download Photo
+                {t("upload")}
               </Button>
             )}
           </div>
@@ -172,7 +178,7 @@ const NewCropper = () => {
         <div className="w-full max-w-[800px] mx-auto flex flex-row justify-between items-center gap-x-10 mt-2">
           <div className="flex flex-col gap-y-1 w-full">
             <div className="flex flex-row items-center justify-between w-full">
-              <span className="font-semibold">Zoom</span>
+              <span className="font-semibold">{t("zoom")}</span>
               <span>{zoom.toFixed(2)}x</span>
             </div>
             <Slider

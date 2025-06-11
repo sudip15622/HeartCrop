@@ -1,0 +1,22 @@
+{
+  "Navbar": {
+    "languages": {
+      "en": "English",
+      "de": "German",
+      "es": "Spanish",
+      "fr": "French",
+      "pt": "Portuguese",
+      "it": "Italian",
+      "hi": "Hindi"
+    },
+    "title": "HeartCrop"
+  },
+  "Home": {
+    "title": "Crop a heart shape photo online",
+    "tips": "Zoom and drag to get the desired content inside shape.",
+    "upload": "Upload Photo",
+    "change": "Change Photo",
+    "download": "Download Photo",
+    "zoom": "zoom"
+  }
+}

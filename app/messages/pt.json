@@ -1,0 +1,22 @@
+{
+  "Navbar": {
+    "languages": {
+      "en": "Inglês",
+      "de": "Alemão",
+      "es": "Espanhol",
+      "fr": "Francês",
+      "pt": "Português",
+      "it": "Italiano",
+      "hi": "Hindi"
+    },
+    "title": "HeartCrop"
+  },
+  "Home": {
+    "title": "Corte uma foto em forma de coração online",
+    "tips": "Dê zoom e arraste para obter o conteúdo desejado dentro da forma.",
+    "upload": "Carregar foto",
+    "change": "Mudar foto",
+    "download": "Baixar foto",
+    "zoom": "Zoom"
+  }
+}

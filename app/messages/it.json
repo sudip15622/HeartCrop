@@ -1,0 +1,21 @@
+{
+  "Navbar": {
+    "languages": {
+      "en": "Inglese",
+      "de": "Tedesco",
+      "es": "Spagnolo",
+      "fr": "Francese",
+      "pt": "Portoghese",
+      "it": "Italiano",
+      "hi": "Hindi"
+    },
+    "title": "HeartCrop"
+  },
+  "Home": {
+    "title": "Ritaglia una foto a forma di cuore online",
+    "tips": "Zoom e trascina per ottenere il contenuto desiderato all'interno della forma.",
+    "upload": "Carica",
+    "download": "Scarica",
+    "zoom": "Zoom"
+  }
+}
