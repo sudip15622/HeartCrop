@@ -2,7 +2,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #272727;
 }
 
 * {
@@ -42,12 +42,12 @@ body {
 
 main {
   width: 100%;
-  margin: 70px 28px;
+  margin: 70px 28px 150px 28px;
   padding: 0 28px;
   max-width: 1336px;
   display: flex;
   flex-direction: column;
-  row-gap: 200px;
+  row-gap: 150px;
 }
 
 li {

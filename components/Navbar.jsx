@@ -1,11 +1,11 @@
 "use client";
 import React, { useState } from "react";
-import { FaHeart, FaCaretDown } from "react-icons/fa";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 
 import { IoMdCheckmark } from "react-icons/io";
+import { FaHeart, FaCaretDown } from "react-icons/fa";
 
 const Navbar = () => {
   const t = useTranslations("Navbar");

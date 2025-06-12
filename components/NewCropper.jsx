@@ -145,7 +145,7 @@ const NewCropper = () => {
                 startIcon={<IoMdDownload />}
                 color="success"
               >
-                {t("upload")}
+                {t("download")}
               </Button>
             )}
           </div>
