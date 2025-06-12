@@ -1,9 +1,16 @@
-export default function getRequestConfig({ headers } = {}) {
-  const acceptLanguage = headers?.get?.('accept-language');
-  const preferred = acceptLanguage?.split(',')[0] || 'en';
-  const locale = preferred.split('-')[0];
-
+import {getRequestConfig} from 'next-intl/server';
+import {hasLocale} from 'next-intl';
+import {routing} from './routing';
+ 
+export default getRequestConfig(async ({requestLocale}) => {
+  // Typically corresponds to the `[locale]` segment
+  const requested = await requestLocale;
+  const locale = hasLocale(routing.locales, requested)
+    ? requested
+    : routing.defaultLocale;
+ 
   return {
-    locale: ['en', 'de', 'es', 'fr', 'hi', 'it', 'pt'].includes(locale) ? locale : 'en'
+    locale,
+    messages: (await import(`../messages/${locale}.json`)).default
   };
-}
+});

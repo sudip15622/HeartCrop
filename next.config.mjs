@@ -1,11 +1,10 @@
-import nextIntl from 'next-intl/plugin';
-import nextIntlConfig from './next-intl.config.js';
+import createNextIntlPlugin from 'next-intl/plugin';
+
+const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  }
+  // Your other config options (if any)
 };
 
-export default nextIntl(nextIntlConfig)(nextConfig);
+export default withNextIntl(nextConfig);

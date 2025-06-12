@@ -1,4 +1,8 @@
 {
+  "Metadata": {
+    "title": "HeartCrop - Recortar fotos en línea",
+    "description": "HeartCrop es un recortador de imágenes en línea donde puedes recortar cualquier imagen en formas deseadas como corazón, círculo, cuadrado, estrella y próximamente más. Se admiten extensiones como png, jpg, jpeg en nuestra plataforma."
+  },
   "Navbar": {
     "languages": {
       "en": "Inglés",

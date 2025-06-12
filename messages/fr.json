@@ -1,4 +1,8 @@
 {
+  "Metadata": {
+    "title": "HeartCrop - Rogner une photo en ligne",
+    "description": "HeartCrop est un outil de rognage d'image en ligne permettant de rogner vos images en formes personnalisées telles que cœur, cercle, carré, étoile et plus encore bientôt. Les extensions comme png, jpg, jpeg sont toutes prises en charge sur notre plateforme."
+  },
   "Navbar": {
     "languages": {
       "en": "Anglais",

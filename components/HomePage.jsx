@@ -13,6 +13,8 @@ const HomePage = () => {
         </h1>
         <NewCropper />
       </section>
+
+      
     </main>
   );
 };

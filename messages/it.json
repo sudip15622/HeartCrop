@@ -1,4 +1,8 @@
 {
+  "Metadata": {
+    "title": "HeartCrop - Ritaglia foto online",
+    "description": "HeartCrop è un ritagliatore di immagini online dove puoi ritagliare qualsiasi immagine in forme desiderate come cuore, cerchio, quadrato, stella e altre in arrivo. Sono supportate estensioni come png, jpg, jpeg sulla nostra piattaforma."
+  },
   "Navbar": {
     "languages": {
       "en": "Inglese",
@@ -14,8 +18,9 @@
   "Home": {
     "title": "Ritaglia una foto a forma di cuore online",
     "tips": "Zoom e trascina per ottenere il contenuto desiderato all'interno della forma.",
-    "upload": "Carica",
-    "download": "Scarica",
+    "upload": "Carica foto",
+    "change": "Cambia foto",
+    "download": "Scarica foto",
     "zoom": "Zoom"
   }
 }

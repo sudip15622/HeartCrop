@@ -1,4 +1,8 @@
 {
+  "Metadata": {
+    "title": "HeartCrop - Crop photo online",
+    "description": "HeartCrop is online image cropper where you can crop any images to your desired shapes like, heart, circle, square, star, and soon. Extensions like png, jpg, jpeg, all are supported in our platform."
+  },
   "Navbar": {
     "languages": {
       "en": "English",

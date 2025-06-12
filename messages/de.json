@@ -1,4 +1,8 @@
 {
+  "Metadata": {
+    "title": "HeartCrop - Foto online zuschneiden",
+    "description": "HeartCrop ist ein Online-Bild-Zuschnitt-Tool, mit dem du Bilder in gewünschte Formen wie Herz, Kreis, Quadrat, Stern und bald weitere zuschneiden kannst. Erweiterungen wie png, jpg, jpeg werden alle auf unserer Plattform unterstützt."
+  },
   "Navbar": {
     "languages": {
       "en": "Englisch",

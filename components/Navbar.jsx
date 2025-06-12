@@ -38,12 +38,12 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 left-0 bg-[var(--background)] z-50 w-full flex items-center justify-center shadow-md">
       <div className="w-full max-w-7xl mx-7 my-4 flex flex-row items-center justify-between">
-        <div className="flex flex-row items-center gap-x-2">
+        <Link href={"/"} className="flex flex-row items-center gap-x-2"> 
           <span className="flex items-center justify-center text-xl">
             <FaHeart />
           </span>
           <span className="text-xl font-semibold">{t("title")}</span>
-        </div>
+        </Link>
 
         {/* Language Selector */}
         <div className="relative">
