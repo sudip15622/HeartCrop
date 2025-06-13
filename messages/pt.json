@@ -17,10 +17,93 @@
   },
   "Home": {
     "title": "Corte uma foto em forma de coração online",
-    "tips": "Dê zoom e arraste para obter o conteúdo desejado dentro da forma.",
+    "tips": "Dê zoom e arraste para posicionar o conteúdo desejado dentro da forma.",
     "upload": "Carregar foto",
-    "change": "Mudar foto",
+    "change": "Trocar foto",
     "download": "Baixar foto",
-    "zoom": "Zoom"
+    "zoom": "zoom",
+    "info": "Suas imagens são processadas inteiramente no seu navegador. Nada é enviado para nenhum servidor.",
+    "howToCrop": {
+      "title": "Como cortar uma imagem em diferentes formas?",
+      "description": "Crie sua imagem perfeita em formato circular, de estrela ou coração em apenas algumas etapas simples.",
+      "steps": [
+        {
+          "title": "Carregue sua imagem",
+          "description": "Clique no botão de upload e selecione a imagem que deseja cortar do seu dispositivo."
+        },
+        {
+          "title": "Selecione a forma desejada",
+          "description": "Você pode escolher o formato que deseja cortar, como coração, círculo, quadrado, estrela, etc."
+        },
+        {
+          "title": "Ajuste o corte",
+          "description": "Use a ferramenta de corte em forma para selecionar a área que deseja manter. Arraste para mover e use o controle deslizante para redimensionar."
+        },
+        {
+          "title": "Baixe a imagem",
+          "description": "Clique no botão de download para salvar sua imagem perfeitamente cortada."
+        }
+      ]
+    },
+    "whyChooseUs": {
+      "title": "Por que escolher nossa ferramenta?",
+      "description": "A escolha inteligente para cortar fotos de forma rápida, fácil e segura.",
+      "reasons": [
+        {
+          "title": "100% Grátis e Privado",
+          "description": "Não é necessário registro. Suas imagens permanecem privadas e são processadas totalmente no seu navegador."
+        },
+        {
+          "title": "Rápido como um raio",
+          "description": "Processamento instantâneo com visualização em tempo real. Sem esperas por upload ou processamento no servidor."
+        },
+        {
+          "title": "Corte em várias formas",
+          "description": "Corte versátil com formas perfeitas de coração para fotos de perfil e miniaturas."
+        },
+        {
+          "title": "Saída em alta qualidade",
+          "description": "Exporte suas imagens cortadas em alta resolução, perfeitas para redes sociais e uso profissional."
+        },
+        {
+          "title": "Seguro e confiável",
+          "description": "Suas imagens nunca saem do seu dispositivo. Desenvolvido com foco em privacidade e segurança."
+        }
+      ]
+    },
+    "faqs": {
+      "title": "Perguntas Frequentes",
+      "description": "Crie sua imagem perfeita em formato circular, estrela ou coração em apenas alguns passos.",
+      "qna": [
+        {
+          "question": "Quais formatos de imagem são suportados?",
+          "answer": "O HeartCrop suporta todos os principais formatos de imagem para upload, incluindo JPG, PNG, WebP e mais. Você pode baixar sua imagem cortada em quatro formatos: PNG (com transparência), JPEG (ideal para fotos), WebP (formato moderno com boa compressão) e SVG (formato vetorial, perfeito para logotipos e ícones)."
+        },
+        {
+          "question": "Quais formas estão disponíveis no HeartCrop?",
+          "answer": "O HeartCrop oferece várias formas, incluindo 4 tipos de coração como o coração tradicional, coração partido, etc. Também há formas como quadrado, círculo, estrela e polígono disponíveis na lateral esquerda da ferramenta."
+        },
+        {
+          "question": "Existe um limite de tamanho para as imagens carregadas?",
+          "answer": "Embora não haja um limite de tamanho estrito, recomenda-se carregar imagens com menos de 10 MB para melhor desempenho."
+        },
+        {
+          "question": "Posso usar isso para fotos de perfil em redes sociais?",
+          "answer": "Com certeza! Nossa ferramenta de corte circular é perfeita para fotos de perfil em plataformas como Instagram, Twitter, LinkedIn e Facebook. As outras formas também são ótimas para miniaturas e postagens."
+        },
+        {
+          "question": "Como obter um fundo transparente?",
+          "answer": "Ao cortar uma imagem com nossa ferramenta, ela será salva automaticamente como PNG com fundo transparente fora da área cortada. Ideal para logotipos e fotos de perfil."
+        }
+      ]
+    }
+  },
+  "Footer": {
+    "title": "HeartCrop",
+    "description": "Ferramenta online gratuita para criar imagens perfeitas em formato circular, quadrado, estrelado e em forma de coração.",
+    "privacyPolicy": "Política de Privacidade",
+    "termsOfUse": "Termos de Uso",
+    "contactUs": "Fale Conosco",
+    "copyRight": "2025 HeartCrop"
   }
 }

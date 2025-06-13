@@ -16,11 +16,94 @@
     "title": "HeartCrop"
   },
   "Home": {
-    "title": "Schneiden Sie online ein herzförmiges Foto zu",
-    "tips": "Zoomen und ziehen, um den gewünschten Inhalt innerhalb der Form zu erhalten.",
+    "title": "Online ein Foto in Herzform zuschneiden",
+    "tips": "Zoomen und ziehen Sie, um den gewünschten Bildausschnitt in der Form zu positionieren.",
     "upload": "Foto hochladen",
     "change": "Foto ändern",
     "download": "Foto herunterladen",
-    "zoom": "Zoomen"
+    "zoom": "Zoom",
+    "info": "Ihre Bilder werden vollständig in Ihrem Browser verarbeitet. Es wird nichts auf einen Server hochgeladen.",
+    "howToCrop": {
+      "title": "Wie schneide ich ein Bild in verschiedene Formen?",
+      "description": "Erstellen Sie Ihr perfektes Bild in Herz-, Kreis- oder Sternform in nur wenigen Schritten.",
+      "steps": [
+        {
+          "title": "Bild hochladen",
+          "description": "Klicken Sie auf die Schaltfläche 'Hochladen' und wählen Sie das Bild von Ihrem Gerät aus, das Sie zuschneiden möchten."
+        },
+        {
+          "title": "Gewünschte Form auswählen",
+          "description": "Wählen Sie eine Form wie Herz, Kreis, Quadrat, Stern usw. zum Zuschneiden aus."
+        },
+        {
+          "title": "Zuschneiden anpassen",
+          "description": "Verwenden Sie das Werkzeug, um den Bereich zu wählen, den Sie behalten möchten. Ziehen zum Verschieben, mit dem Schieberegler die Größe ändern."
+        },
+        {
+          "title": "Bild herunterladen",
+          "description": "Klicken Sie auf die Schaltfläche 'Herunterladen', um Ihr perfekt zugeschnittenes Bild zu speichern."
+        }
+      ]
+    },
+    "whyChooseUs": {
+      "title": "Warum unser Tool wählen?",
+      "description": "Die clevere Wahl für schnelles, einfaches und sicheres Zuschneiden von Fotos.",
+      "reasons": [
+        {
+          "title": "100% kostenlos & privat",
+          "description": "Keine Registrierung erforderlich. Ihre Bilder bleiben privat und werden nur im Browser verarbeitet."
+        },
+        {
+          "title": "Blitzschnell",
+          "description": "Sofortige Verarbeitung mit Echtzeit-Vorschau. Kein Warten auf Uploads oder Serverantworten."
+        },
+        {
+          "title": "Zuschneiden in verschiedenen Formen",
+          "description": "Vielseitiges Zuschneiden mit perfekten Herzformen für Profilbilder und Thumbnails."
+        },
+        {
+          "title": "Hohe Qualität",
+          "description": "Exportieren Sie Ihre zugeschnittenen Bilder in hoher Auflösung - ideal für soziale Medien oder professionelle Zwecke."
+        },
+        {
+          "title": "Sicher & zuverlässig",
+          "description": "Ihre Bilder verlassen niemals Ihr Gerät. Entwickelt mit Fokus auf Datenschutz und Sicherheit."
+        }
+      ]
+    },
+    "faqs": {
+      "title": "Häufig gestellte Fragen",
+      "description": "Erstellen Sie Ihr perfektes Bild in Herz-, Stern- oder Kreisform in nur wenigen Schritten.",
+      "qna": [
+        {
+          "question": "Welche Bildformate werden unterstützt?",
+          "answer": "HeartCrop unterstützt alle gängigen Bildformate wie JPG, PNG, WebP und mehr. Sie können Ihre zugeschnittenen Bilder in PNG (mit Transparenz), JPEG, WebP und SVG herunterladen."
+        },
+        {
+          "question": "Welche Formen sind bei HeartCrop verfügbar?",
+          "answer": "HeartCrop bietet verschiedene Formen an, darunter 4 Herzformen (z. B. reguläres Herz, gebrochenes Herz) sowie Quadrat, Kreis, Stern und Polygon."
+        },
+        {
+          "question": "Gibt es eine Größenbeschränkung für Bilder?",
+          "answer": "Es gibt keine feste Größenbeschränkung, aber wir empfehlen Bilder unter 10 MB für optimale Leistung."
+        },
+        {
+          "question": "Kann ich die Bilder für soziale Medien verwenden?",
+          "answer": "Ja, insbesondere die Kreisform eignet sich perfekt für Profilbilder auf Instagram, Twitter, LinkedIn oder Facebook."
+        },
+        {
+          "question": "Wie bekomme ich einen transparenten Hintergrund?",
+          "answer": "Das Bild wird beim Zuschneiden automatisch als PNG mit transparentem Hintergrund gespeichert - ideal für Logos und Profilbilder."
+        }
+      ]
+    }
+  },
+  "Footer": {
+    "title": "HeartCrop",
+    "description": "Kostenloses Online-Tool zum Erstellen perfekter kreisförmiger, quadratischer, sternförmiger und herzförmiger Bilder.",
+    "privacyPolicy": "Datenschutzrichtlinie",
+    "termsOfUse": "Nutzungsbedingungen",
+    "contactUs": "Kontaktieren Sie uns",
+    "copyRight": "2025 HeartCrop"
   }
 }

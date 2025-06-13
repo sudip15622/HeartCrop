@@ -16,11 +16,94 @@
     "title": "HeartCrop"
   },
   "Home": {
-    "title": "Recadrez une photo en forme de cœur en ligne",
-    "tips": "Zoomer et faire glisser pour obtenir le contenu souhaité à l'intérieur de la forme.",
-    "upload": "Télécharger la photo",
+    "title": "Rogner une photo en forme de cœur en ligne",
+    "tips": "Zoomez et faites glisser pour placer le contenu souhaité à l'intérieur de la forme.",
+    "upload": "Télécharger une photo",
     "change": "Changer la photo",
     "download": "Télécharger la photo",
-    "zoom": "Zoom"
+    "zoom": "zoom",
+    "info": "Vos images sont traitées entièrement dans votre navigateur. Rien n'est téléchargé sur un serveur.",
+    "howToCrop": {
+      "title": "Comment rogner une image en différentes formes ?",
+      "description": "Créez votre image parfaite en forme de cercle, d'étoile ou de cœur en quelques étapes simples.",
+      "steps": [
+        {
+          "title": "Téléchargez votre image",
+          "description": "Cliquez sur le bouton de téléchargement et sélectionnez l'image que vous souhaitez rogner depuis votre appareil."
+        },
+        {
+          "title": "Sélectionnez la forme souhaitée",
+          "description": "Vous pouvez choisir la forme souhaitée comme un cœur, un cercle, un carré, une étoile, etc."
+        },
+        {
+          "title": "Ajustez le rognage",
+          "description": "Utilisez l'outil de rognage en forme pour sélectionner la zone à conserver. Faites glisser pour repositionner et utilisez le curseur pour redimensionner."
+        },
+        {
+          "title": "Téléchargez l'image",
+          "description": "Cliquez sur le bouton de téléchargement pour enregistrer votre image parfaitement rognée."
+        }
+      ]
+    },
+    "whyChooseUs": {
+      "title": "Pourquoi choisir notre outil ?",
+      "description": "Le choix intelligent pour un rognage de photo rapide, facile et sécurisé.",
+      "reasons": [
+        {
+          "title": "100 % Gratuit et Privé",
+          "description": "Aucune inscription requise. Vos images restent privées et sont traitées entièrement dans votre navigateur."
+        },
+        {
+          "title": "Ultra rapide",
+          "description": "Traitement instantané avec aperçu en temps réel. Pas d'attente pour les téléchargements ou le traitement sur serveur."
+        },
+        {
+          "title": "Rognage en plusieurs formes",
+          "description": "Rognage polyvalent avec des formes parfaites comme le cœur pour les photos de profil et les miniatures."
+        },
+        {
+          "title": "Sortie haute qualité",
+          "description": "Exportez vos images rognées en haute résolution, parfaites pour les réseaux sociaux et un usage professionnel."
+        },
+        {
+          "title": "Sécurisé et fiable",
+          "description": "Vos images ne quittent jamais votre appareil. Conçu avec la confidentialité et la sécurité à l'esprit."
+        }
+      ]
+    },
+    "faqs": {
+      "title": "Questions Fréquemment Posées",
+      "description": "Créez votre image parfaite en forme de cercle, d'étoile ou de cœur en quelques étapes simples.",
+      "qna": [
+        {
+          "question": "Quels formats d'image sont pris en charge ?",
+          "answer": "HeartCrop prend en charge tous les formats d'image principaux, y compris JPG, PNG, WebP et plus encore. Vous pouvez télécharger votre image rognée dans quatre formats : PNG (avec transparence), JPEG (idéal pour les photos), WebP (format moderne avec une bonne compression) et SVG (format vectoriel, parfait pour les logos et les icônes)."
+        },
+        {
+          "question": "Quelles formes sont disponibles dans HeartCrop ?",
+          "answer": "HeartCrop propose différentes formes, y compris 4 types de cœurs comme le cœur classique, le cœur brisé, etc. Il propose aussi des formes comme carré, cercle, étoile et polygone accessibles dans la section gauche de l'outil."
+        },
+        {
+          "question": "Y a-t-il une limite de taille pour les images téléchargées ?",
+          "answer": "Bien qu'il n'y ait pas de limite stricte, nous recommandons de télécharger des images de moins de 10 Mo pour des performances optimales."
+        },
+        {
+          "question": "Puis-je utiliser cela pour les photos de profil sur les réseaux sociaux ?",
+          "answer": "Absolument ! Notre fonction de rognage circulaire est parfaite pour les photos de profil sur Instagram, Twitter, LinkedIn, Facebook, etc. Les autres formes sont également excellentes pour les miniatures et les publications."
+        },
+        {
+          "question": "Comment obtenir un fond transparent ?",
+          "answer": "Lorsque vous rognez une image avec notre outil, elle est automatiquement enregistrée en PNG avec un fond transparent à l'extérieur de la zone rognée. Parfait pour les logos et photos de profil."
+        }
+      ]
+    }
+  },
+  "Footer": {
+    "title": "HeartCrop",
+    "description": "Outil en ligne gratuit pour créer des images parfaites en forme circulaire, carrée, étoilée et en forme de cœur.",
+    "privacyPolicy": "Politique de Confidentialité",
+    "termsOfUse": "Conditions d'Utilisation",
+    "contactUs": "Contactez-nous",
+    "copyRight": "2025 HeartCrop"
   }
 }

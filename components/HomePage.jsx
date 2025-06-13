@@ -18,62 +18,55 @@ import { GrSecure } from "react-icons/gr";
 
 const HomePage = () => {
   const t = useTranslations("Home");
+  const s = t.raw("howToCrop.steps");
+  const r = t.raw("whyChooseUs.reasons");
 
   const steps = [
     {
-      title: "Upload Your Image",
-      description:
-        "Click the upload button and select the image you want to crop from your device.",
+      title: s[0].title,
+      description: s[0].description,
       icon: <IoCloudUploadOutline />,
     },
     {
-      title: "Select desired shape",
-      description:
-        "You can choose the desired shape to crop like heart, circle, square, star, and so on.",
+      title: s[1].title,
+      description: s[1].description,
       icon: <PiShapesLight />,
     },
     {
-      title: "Adjust the Crop",
-      description:
-        "Use the shaped crop tool to select the area you want to keep. Drag to reposition, and use the slider to resize.",
+      title: s[2].title,
+      description: s[2].description,
       icon: <IoCropOutline />,
     },
     {
-      title: "Download Image",
-      description:
-        "Click the download button to save your perfectly cropped shaped image.",
+      title: s[3].title,
+      description: s[3].description,
       icon: <IoCloudDownloadOutline />,
     },
   ];
   const reasons = [
     {
-      title: "100% Free & Private",
-      description:
-        "No registration required. Your images stay private and are processed entirely in your browser.",
+      title: r[0].title,
+      description: r[0].description,
       icon: <MdOutlineSecurity />,
     },
     {
-      title: "Lightning Fast",
-      description:
-        "Instant processing with real-time preview. No waiting for uploads or server processing.",
+      title: r[1].title,
+      description: r[1].description,
       icon: <BsFillLightningChargeFill />,
     },
     {
-      title: "Various Shape Cropping",
-      description:
-        "Versatile image cropping with perfect heart like shapes for profile pictures and thumbnails.",
+      title: r[2].title,
+      description: r[2].description,
       icon: <BiSolidShapes />,
     },
     {
-      title: "High-Quality Output",
-      description:
-        "Export your cropped images in high resolution, perfect for social media and professional use.",
+      title: r[3].title,
+      description: r[3].description,
       icon: <FaImage />,
     },
     {
-      title: "Secure & Reliable",
-      description:
-        "Your images never leave your device. Built with privacy and security in mind.",
+      title: r[4].title,
+      description: r[4].description,
       icon: <GrSecure />,
     },
   ];
@@ -85,19 +78,13 @@ const HomePage = () => {
           {t("title")}
         </h1>
         <NewCropper />
-        <p className="text-center mt-2 text-gray-500 mx-auto">
-          Your images are processed entirely in your browser. Nothing is
-          uploaded to any server.
-        </p>
+        <p className="text-center mt-2 text-gray-500 mx-auto">{t("info")}</p>
       </section>
       <section className="flex flex-col items-center">
         <h1 className="mb-5 text-center text-4xl font-semibold">
-          How to Crop an Image into various shapes?
+          {t("howToCrop.title")}
         </h1>
-        <p className="text-xl text-gray-500">
-          Create your perfect circular or starred or heart shaped image in just
-          a few simple steps.
-        </p>
+        <p className="text-xl text-gray-500">{t("howToCrop.description")}</p>
         <div className="grid grid-cols-2 gap-14 items-stretch justify-center mt-10">
           {steps.map((step, index) => {
             return (
@@ -118,17 +105,17 @@ const HomePage = () => {
 
       <section className="flex flex-col items-center">
         <h1 className="mb-5 text-center text-4xl font-semibold">
-          Why Choose Our Tool?
+          {t("whyChooseUs.title")}
         </h1>
         <p className="text-xl text-gray-500">
-          The smart choice for quick, easy, and secure photo cropping
+          {t("whyChooseUs.description")}
         </p>
-        <div className="flex flex-col gap-y-10 mt-10">
+        <div className="flex flex-col gap-y-10 mt-10 w-full">
           {reasons.map((reason, index) => {
             return (
               <div
                 key={index}
-                className="shadow-xl rounded-xl border-1 border-gray-200 overflow-hidden"
+                className="shadow-xl rounded-xl border-1 border-gray-200 overflow-hidden w-full"
               >
                 <div className="flex flex-row gap-x-4 items-center border-l-5 border-gray-200 p-10 ">
                   <div className="text-3xl bg-gray-100 w-16 h-16 flex items-center justify-center rounded-2xl">
@@ -149,11 +136,10 @@ const HomePage = () => {
 
       <section className="flex flex-col items-center">
         <h1 className="mb-5 text-center text-4xl font-semibold">
-          Frequently Asked Questions
+          {t("faqs.title")}
         </h1>
         <p className="text-xl text-gray-500">
-          Create your perfect circular or starred or heart shaped image in just
-          few simple steps.
+          {t("faqs.description")}
         </p>
         <FAQAccordion />
       </section>

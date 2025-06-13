@@ -17,10 +17,93 @@
   },
   "Home": {
     "title": "Ritaglia una foto a forma di cuore online",
-    "tips": "Zoom e trascina per ottenere il contenuto desiderato all'interno della forma.",
+    "tips": "Zooma e trascina per posizionare il contenuto desiderato all'interno della forma.",
     "upload": "Carica foto",
     "change": "Cambia foto",
     "download": "Scarica foto",
-    "zoom": "Zoom"
+    "zoom": "zoom",
+    "info": "Le tue immagini vengono elaborate interamente nel tuo browser. Nulla viene caricato su alcun server.",
+    "howToCrop": {
+      "title": "Come ritagliare un'immagine in forme diverse?",
+      "description": "Crea la tua immagine perfetta a forma di cerchio, stella o cuore in pochi semplici passaggi.",
+      "steps": [
+        {
+          "title": "Carica la tua immagine",
+          "description": "Fai clic sul pulsante di caricamento e seleziona l'immagine che desideri ritagliare dal tuo dispositivo."
+        },
+        {
+          "title": "Seleziona la forma desiderata",
+          "description": "Puoi scegliere la forma desiderata come cuore, cerchio, quadrato, stella, ecc."
+        },
+        {
+          "title": "Regola il ritaglio",
+          "description": "Usa lo strumento di ritaglio a forma per selezionare l'area da mantenere. Trascina per spostarla e usa il cursore per ridimensionarla."
+        },
+        {
+          "title": "Scarica l'immagine",
+          "description": "Fai clic sul pulsante di download per salvare la tua immagine perfettamente ritagliata."
+        }
+      ]
+    },
+    "whyChooseUs": {
+      "title": "Perché scegliere il nostro strumento?",
+      "description": "La scelta intelligente per un ritaglio foto rapido, semplice e sicuro.",
+      "reasons": [
+        {
+          "title": "100% Gratuito e Privato",
+          "description": "Nessuna registrazione richiesta. Le tue immagini restano private e vengono elaborate completamente nel tuo browser."
+        },
+        {
+          "title": "Super veloce",
+          "description": "Elaborazione istantanea con anteprima in tempo reale. Nessuna attesa per il caricamento o l'elaborazione del server."
+        },
+        {
+          "title": "Ritaglio in più forme",
+          "description": "Ritaglio versatile con forme perfette come il cuore per foto profilo e miniature."
+        },
+        {
+          "title": "Output di alta qualità",
+          "description": "Esporta le immagini ritagliate in alta risoluzione, perfette per i social media e l'uso professionale."
+        },
+        {
+          "title": "Sicuro e affidabile",
+          "description": "Le tue immagini non lasciano mai il tuo dispositivo. Progettato con attenzione alla privacy e alla sicurezza."
+        }
+      ]
+    },
+    "faqs": {
+      "title": "Domande Frequenti",
+      "description": "Crea la tua immagine perfetta a forma di cerchio, stella o cuore in pochi semplici passaggi.",
+      "qna": [
+        {
+          "question": "Quali formati immagine sono supportati?",
+          "answer": "HeartCrop supporta tutti i principali formati immagine tra cui JPG, PNG, WebP e altri. Puoi scaricare l'immagine ritagliata in quattro formati: PNG (con trasparenza), JPEG (ideale per le foto), WebP (formato moderno con buona compressione) e SVG (formato vettoriale, perfetto per loghi e icone)."
+        },
+        {
+          "question": "Quali forme sono disponibili su HeartCrop?",
+          "answer": "HeartCrop offre varie forme, comprese 4 varianti di cuore come il cuore classico, il cuore spezzato, ecc. Sono disponibili anche forme come quadrato, cerchio, stella e poligono, tutte accessibili nella barra laterale sinistra."
+        },
+        {
+          "question": "C'è un limite di dimensione per le immagini caricate?",
+          "answer": "Non c'è un limite rigido, ma si consiglia di caricare immagini inferiori a 10 MB per prestazioni ottimali."
+        },
+        {
+          "question": "Posso usarlo per foto profilo sui social media?",
+          "answer": "Assolutamente sì! Il ritaglio circolare è perfetto per foto profilo su Instagram, Twitter, LinkedIn, Facebook, ecc. Le altre forme sono ideali per miniature e post."
+        },
+        {
+          "question": "Come ottenere uno sfondo trasparente?",
+          "answer": "Quando ritagli un'immagine con il nostro strumento, viene automaticamente salvata come PNG con sfondo trasparente fuori dall'area ritagliata. Perfetto per loghi e foto profilo."
+        }
+      ]
+    }
+  },
+  "Footer": {
+    "title": "HeartCrop",
+    "description": "Strumento online gratuito per creare immagini perfette di forma circolare, quadrata, stellata e a forma di cuore.",
+    "privacyPolicy": "Informativa sulla Privacy",
+    "termsOfUse": "Termini di Utilizzo",
+    "contactUs": "Contattaci",
+    "copyRight": "2025 HeartCrop"
   }
 }
