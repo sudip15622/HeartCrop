@@ -72,7 +72,7 @@ const HomePage = () => {
   ];
 
   return (
-    <main>
+    <main className="flex flex-col gap-y-[150px]">
       <section className="flex flex-col">
         <h1 className="text-4xl font-semibold text-center mb-10">
           {t("title")}
@@ -134,7 +134,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="flex flex-col items-center">
+      <section className="flex flex-col items-center" id="faq">
         <h1 className="mb-5 text-center text-4xl font-semibold">
           {t("faqs.title")}
         </h1>

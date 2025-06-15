@@ -105,5 +105,109 @@
     "termsOfUse": "Conditions d'Utilisation",
     "contactUs": "Contactez-nous",
     "copyRight": "2025 HeartCrop"
+  },
+  "Privacy": {
+    "title": "Politique de Confidentialité",
+    "lastUpdated": "Dernière mise à jour : 16 juin 2025",
+    "introduction": {
+      "title": "1. Introduction",
+      "description": "Chez HeartCrop, nous prenons votre vie privée au sérieux. Cette politique de confidentialité explique comment nous collectons, utilisons et protégeons vos informations lorsque vous utilisez notre service."
+    },
+    "information": {
+      "title": "2. Informations que nous ne collectons pas",
+      "description": "HeartCrop est conçu dans le respect de la vie privée :",
+      "points": [
+        "Nous ne stockons ni ne transmettons vos images - tout le traitement se fait localement dans votre navigateur",
+        "Nous ne demandons pas de compte utilisateur ni d'inscription",
+        "Nous ne collectons pas d'informations personnelles",
+        "Nous n'utilisons pas de cookies à des fins de suivi"
+      ]
+    },
+    "techInfo": {
+      "title": "3. Informations techniques",
+      "description": "Notre service peut collecter automatiquement certaines informations techniques :",
+      "points": [
+        "Type et version du navigateur",
+        "Système d'exploitation",
+        "Informations sur l'appareil",
+        "Statistiques d'utilisation anonymes"
+      ],
+      "descriptionEnd": "Ces informations sont utilisées uniquement pour améliorer notre service et résoudre des problèmes techniques."
+    },
+    "thirdParty": {
+      "title": "4. Services tiers",
+      "description": "Nous pouvons utiliser des services tiers pour :",
+      "points": [
+        "L’analyse du site web (par ex. Google Analytics)",
+        "Les réseaux de diffusion de contenu (CDN)",
+        "Le suivi et la surveillance des erreurs"
+      ],
+      "descriptionEnd": "Ces services peuvent collecter des données d'utilisation anonymes, soumises à leurs propres politiques de confidentialité."
+    },
+    "security": {
+      "title": "5. Sécurité des données",
+      "description": "Nous mettons en œuvre des mesures de sécurité appropriées pour protéger contre tout accès non autorisé, altération, divulgation ou destruction de toute information traitée par notre service."
+    },
+    "childrenPrivacy": {
+      "title": "6. Vie privée des enfants",
+      "description": "Notre service ne s'adresse pas aux enfants de moins de 13 ans. Nous ne collectons pas volontairement d'informations personnelles auprès d'enfants de moins de 13 ans. Si vous êtes parent ou tuteur et pensez que votre enfant nous a fourni des informations personnelles, veuillez nous contacter."
+    },
+    "changes": {
+      "title": "7. Modifications de la politique de confidentialité",
+      "description": "Nous pouvons mettre à jour notre politique de confidentialité de temps à autre. Nous vous informerons de tout changement en publiant la nouvelle politique de confidentialité sur cette page et en mettant à jour la date en haut."
+    },
+    "contactUs": {
+      "title": "8. Contactez-nous",
+      "description": {
+        "text": "Si vous avez des questions concernant cette politique de confidentialité, veuillez nous contacter via",
+        "link": "notre page de contact"
+      }
+    }
+  },
+  "Terms": {
+    "title": "Conditions d'utilisation",
+    "lastUpdated": "Dernière mise à jour : 16 juin 2025",
+    "acceptance": {
+      "title": "1. Acceptation des Conditions",
+      "description": "En accédant à HeartCrop et en l'utilisant (\"le Service\"), vous acceptez d'être lié par les termes et conditions décrits dans cet accord."
+    },
+    "serviceUse": {
+      "title": "2. Utilisation du Service",
+      "description": "HeartCrop fournit un outil en ligne de recadrage d'images. Vous acceptez d'utiliser ce service uniquement à des fins légales et conformément à ces conditions.",
+      "points": [
+        "Le service est fourni \"tel quel\", sans aucune garantie.",
+        "Nous nous réservons le droit de modifier ou d'interrompre le service à tout moment.",
+        "Tout traitement d'image est effectué localement dans votre navigateur ; nous ne stockons ni ne transmettons vos images."
+      ]
+    },
+    "responsibilities": {
+      "title": "3. Responsabilités de l'Utilisateur",
+      "description": "En utilisant HeartCrop, vous vous engagez à ne pas :",
+      "points": [
+        "Utiliser le service à des fins illégales",
+        "Téléverser ou traiter du contenu enfreignant des droits de propriété intellectuelle",
+        "Tenter de perturber ou de compromettre la sécurité du service",
+        "Utiliser le service d'une manière pouvant endommager ou surcharger nos systèmes"
+      ]
+    },
+    "property": {
+      "title": "4. Propriété Intellectuelle",
+      "description": "HeartCrop et son contenu original, ses fonctionnalités et ses caractéristiques sont notre propriété et sont protégés par les lois internationales sur le droit d'auteur, les marques et autres lois relatives à la propriété intellectuelle."
+    },
+    "limitation": {
+      "title": "5. Limitation de Responsabilité",
+      "description": "En aucun cas, HeartCrop ne pourra être tenu responsable de dommages indirects, accessoires, spéciaux, consécutifs ou punitifs, y compris, sans s'y limiter, les pertes de profits, de données, d'utilisation, de réputation ou d'autres pertes immatérielles."
+    },
+    "changes": {
+      "title": "6. Modifications des Conditions",
+      "description": "Nous nous réservons le droit de modifier ces conditions à tout moment. Nous informerons les utilisateurs de tout changement en mettant à jour la date en haut de cette page. L'utilisation continue du service après modification constitue l'acceptation des nouvelles conditions."
+    },
+    "contactInfo": {
+      "title": "7. Informations de Contact",
+      "description": {
+        "text": "Si vous avez des questions concernant ces conditions, veuillez nous contacter via",
+        "link": "notre page de contact"
+      }
+    }
   }
 }

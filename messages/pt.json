@@ -105,5 +105,109 @@
     "termsOfUse": "Termos de Uso",
     "contactUs": "Fale Conosco",
     "copyRight": "2025 HeartCrop"
+  },
+  "Privacy": {
+    "title": "Política de Privacidade",
+    "lastUpdated": "Última atualização: 16 de junho de 2025",
+    "introduction": {
+      "title": "1. Introdução",
+      "description": "Na HeartCrop, levamos a sua privacidade a sério. Esta Política de Privacidade explica como coletamos, usamos e protegemos suas informações quando você utiliza nosso serviço."
+    },
+    "information": {
+      "title": "2. Informações que não coletamos",
+      "description": "O HeartCrop foi projetado com foco na privacidade:",
+      "points": [
+        "Não armazenamos nem transmitimos suas imagens - todo o processamento é feito localmente no seu navegador",
+        "Não exigimos contas de usuário nem cadastro",
+        "Não coletamos informações pessoais",
+        "Não usamos cookies para fins de rastreamento"
+      ]
+    },
+    "techInfo": {
+      "title": "3. Informações técnicas",
+      "description": "Nosso serviço pode coletar automaticamente algumas informações técnicas:",
+      "points": [
+        "Tipo e versão do navegador",
+        "Sistema operacional",
+        "Informações do dispositivo",
+        "Estatísticas de uso anônimas"
+      ],
+      "descriptionEnd": "Essas informações são usadas exclusivamente para melhorar nosso serviço e resolver problemas técnicos."
+    },
+    "thirdParty": {
+      "title": "4. Serviços de terceiros",
+      "description": "Podemos utilizar serviços de terceiros para:",
+      "points": [
+        "Análise do site (ex: Google Analytics)",
+        "Redes de entrega de conteúdo (CDN)",
+        "Monitoramento e rastreamento de erros"
+      ],
+      "descriptionEnd": "Esses serviços podem coletar dados de uso anônimos sujeitos às suas próprias políticas de privacidade."
+    },
+    "security": {
+      "title": "5. Segurança dos dados",
+      "description": "Implementamos medidas de segurança apropriadas para proteger contra acesso não autorizado, alteração, divulgação ou destruição de qualquer informação processada por nosso serviço."
+    },
+    "childrenPrivacy": {
+      "title": "6. Privacidade das crianças",
+      "description": "Nosso serviço não é direcionado a crianças menores de 13 anos. Não coletamos intencionalmente informações pessoais de crianças com menos de 13 anos. Se você é pai, mãe ou responsável e acredita que seu filho nos forneceu informações pessoais, entre em contato conosco."
+    },
+    "changes": {
+      "title": "7. Alterações nesta Política de Privacidade",
+      "description": "Podemos atualizar nossa Política de Privacidade periodicamente. Notificaremos você sobre quaisquer alterações publicando a nova política nesta página e atualizando a data no topo."
+    },
+    "contactUs": {
+      "title": "8. Contate-nos",
+      "description": {
+        "text": "Se você tiver alguma dúvida sobre esta Política de Privacidade, entre em contato conosco através da",
+        "link": "nossa página de contato"
+      }
+    }
+  },
+  "Terms": {
+    "title": "Termos de Uso",
+    "lastUpdated": "Última atualização: 16 de junho de 2025",
+    "acceptance": {
+      "title": "1. Aceitação dos Termos",
+      "description": "Ao acessar e usar o HeartCrop ('o Serviço'), você aceita e concorda em estar vinculado aos termos e condições descritos neste acordo."
+    },
+    "serviceUse": {
+      "title": "2. Uso do Serviço",
+      "description": "O HeartCrop fornece uma ferramenta online para recorte de imagens. Você concorda em usar este serviço apenas para fins legais e de acordo com estes termos.",
+      "points": [
+        "O serviço é fornecido 'como está', sem quaisquer garantias.",
+        "Reservamo-nos o direito de modificar ou descontinuar o serviço a qualquer momento.",
+        "Todo o processamento de imagens é feito localmente no seu navegador; não armazenamos nem transmitimos suas imagens."
+      ]
+    },
+    "responsibilities": {
+      "title": "3. Responsabilidades do Usuário",
+      "description": "Ao usar o HeartCrop, você concorda em não:",
+      "points": [
+        "Usar o serviço para fins ilegais",
+        "Carregar ou processar conteúdo que infrinja direitos de propriedade intelectual",
+        "Tentar comprometer ou interromper a segurança do serviço",
+        "Usar o serviço de forma a danificar ou sobrecarregar nossos sistemas"
+      ]
+    },
+    "property": {
+      "title": "4. Propriedade Intelectual",
+      "description": "O HeartCrop e seu conteúdo original, funcionalidades e recursos são de nossa propriedade e estão protegidos por leis internacionais de direitos autorais, marcas registradas e outras leis de propriedade intelectual."
+    },
+    "limitation": {
+      "title": "5. Limitação de Responsabilidade",
+      "description": "Em nenhuma circunstância o HeartCrop será responsável por quaisquer danos indiretos, incidentais, especiais, consequenciais ou punitivos, incluindo, sem limitação, perda de lucros, dados, uso, boa-fé ou outras perdas intangíveis."
+    },
+    "changes": {
+      "title": "6. Alterações nos Termos",
+      "description": "Reservamo-nos o direito de modificar estes termos a qualquer momento. Notificaremos quaisquer alterações atualizando a data no topo desta página. O uso contínuo do serviço após as alterações constitui aceitação dos novos termos."
+    },
+    "contactInfo": {
+      "title": "7. Informações de Contato",
+      "description": {
+        "text": "Se você tiver alguma dúvida sobre estes Termos, entre em contato conosco através de",
+        "link": "nossa página de contato"
+      }
+    }
   }
 }

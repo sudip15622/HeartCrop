@@ -45,13 +45,6 @@ main {
   margin: 70px 28px 150px 28px;
   padding: 0 28px;
   max-width: 1336px;
-  display: flex;
-  flex-direction: column;
-  row-gap: 150px;
-}
-
-li {
-  list-style: none;
 }
 
 a {

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
@@ -11,6 +11,21 @@ const Navbar = () => {
   const t = useTranslations("Navbar");
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  const dropDownRef = useRef(null);
+
+  useEffect(() => {
+        function handleClickOutside(event) {
+            if (dropDownRef.current && !dropDownRef.current.contains(event.target)) {
+                setIsOpen(false)
+            }
+        }
+        document.addEventListener('mousedown', handleClickOutside);
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+
+    }, [isOpen]);
 
   // Language codes only, names will be translated below
   const languages = [
@@ -46,7 +61,7 @@ const Navbar = () => {
         </Link>
 
         {/* Language Selector */}
-        <div className="relative">
+        <div className="relative" ref={dropDownRef}>
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="flex items-center justify-between w-[120px] shadow-md rounded-[6px] py-2 px-3"
