@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useTheme } from "@mui/material/styles";
 import {
   FormControl,
@@ -7,8 +7,16 @@ import {
   MenuItem,
   Select,
   Button,
+  Alert,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
+  useMediaQuery,
 } from "@mui/material";
 import Link from "next/link";
+import { sendEmail } from "@/actions/sendEmail";
 
 import { MdEmail } from "react-icons/md";
 import { FaAngleRight } from "react-icons/fa6";
@@ -43,14 +51,60 @@ function getStyles(subject, contactSubject, theme) {
   };
 }
 
+const DialogBox = ({title, description, open, setOpen, fullScreen}) => {
+
+  const handleClose = () => {
+    setOpen(false);
+  }
+
+  return (
+    <React.Fragment>
+      <Dialog
+        fullScreen={fullScreen}
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="responsive-dialog-title"
+      >
+        <DialogTitle id="responsive-dialog-title">
+          {title}
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            {description}
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose} autoFocus>
+            OK
+          </Button>
+        </DialogActions>
+      </Dialog>
+    </React.Fragment>
+  );
+};
+
 const ContactPage = () => {
+  const [open, setOpen] = React.useState(false);
   const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
     message: "",
   });
+  const [isLoading, setIsLoading] = useState(false);
+  const [info, setInfo] = useState("");
+  const [error, setError] = useState("");
+
+  const resetFields = () => {
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
+  };
 
   const handleChange = (key, value) => {
     setFormData((prevData) => ({
@@ -59,13 +113,87 @@ const ContactPage = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const isFormValid = (formData) => {
+    return Object.values(formData).every((value) => value.trim() !== "");
+  };
+
+  const isValidName = (name) => {
+    return /^[A-Za-z]+( [A-Za-z]+)*$/.test(name.trim());
+  };
+
+  const isValidEmail = (email) => {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailRegex.test(email.trim());
+  };
+
+  const isValidMessage = (message) => {
+    return message.trim().length > 10;
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+    if (isLoading) {
+      return;
+    }
+    setError("");
+    setInfo("");
+    setOpen(false);
+
+    setIsLoading(true);
+    if (!isFormValid(formData)) {
+      setIsLoading(false);
+      setError("All fields are required!");
+      setOpen(true);
+      return;
+    }
+
+    if (!isValidName(formData.name)) {
+      setIsLoading(false);
+      setError("Name should only contain alphabets and space in between!");
+      setOpen(true);
+      return;
+    }
+    if (!isValidEmail(formData.email)) {
+      setIsLoading(false);
+      setError("Invalid email!");
+      setOpen(true);
+      return;
+    }
+    if (!isValidMessage(formData.message)) {
+      setIsLoading(false);
+      setError("Message must contain more than 10 characters!");
+      setOpen(true);
+      return;
+    }
+
+    const response = await sendEmail(formData);
+    if (response.error) {
+      setIsLoading(false);
+      setError(response.error);
+      setOpen(true);
+      return;
+    }
+    if (response.apiError) {
+      setIsLoading(false);
+      setError(response.apiError);
+      setOpen(true);
+      return;
+    }
+
+    setIsLoading(false);
+    setInfo("Thank you for your message. We'll get back to you soon.");
+    setOpen(true);
+    resetFields();
   };
 
   return (
     <main className="flex flex-col gap-y-10">
+      {info !== "" && (
+        <DialogBox title={"Successfully sent message!"} description={info} open={open} setOpen={setOpen} fullScreen={fullScreen}/>
+      )}
+      {error !== "" && (
+        <DialogBox title={"Field Error!"} description={error} open={open} setOpen={setOpen} fullScreen={fullScreen}/>
+      )}
       <section className="flex flex-col gap-y-2 w-full items-center text-center mb-4">
         <h1 className="text-4xl font-semibold">Contact Us</h1>
         <p className="text-lg text-gray-500">
@@ -86,6 +214,7 @@ const ContactPage = () => {
             <OutlinedInput
               fullWidth
               placeholder="Your full name"
+              name="name"
               value={formData.name}
               // error
               aria-label="name input"
@@ -95,6 +224,8 @@ const ContactPage = () => {
           <div className="flex flex-col w-full">
             <div className="font-semibold mb-2">Email Address</div>
             <OutlinedInput
+              name="email"
+              type="email"
               fullWidth
               placeholder="you@example.com"
               value={formData.email}
@@ -107,6 +238,7 @@ const ContactPage = () => {
             <div className="font-semibold mb-2">Subject</div>
             <FormControl sx={{ width: "100%" }}>
               <Select
+                name="subject"
                 displayEmpty
                 value={formData.subject}
                 onChange={(e) => handleChange("subject", e.target.value)}
@@ -139,6 +271,7 @@ const ContactPage = () => {
           <div className="flex flex-col w-full">
             <div className="font-semibold mb-2">Message</div>
             <OutlinedInput
+              name="message"
               fullWidth
               placeholder="Your message here"
               value={formData.message}
@@ -149,7 +282,12 @@ const ContactPage = () => {
               onChange={(e) => handleChange("message", e.target.value)}
             />
           </div>
-          <Button fullWidth variant="contained" type="submit">
+          <Button
+            fullWidth
+            variant="contained"
+            type="submit"
+            disabled={!isFormValid(formData)}
+          >
             Send Message
           </Button>
         </form>
