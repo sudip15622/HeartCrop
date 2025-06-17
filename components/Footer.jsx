@@ -10,20 +10,20 @@ const Footer = () => {
   const t = useTranslations("Footer");
 
   return (
-    <footer className="sticky top-0 left-0 bg-[var(--background)] z-50 w-full flex items-center justify-center py-5 border-t-1 border-gray-300">
-      <div className="w-full max-w-7xl mx-7 flex flex-row items-center justify-between">
-        <div className="flex flex-col gap-y-2">
+    <footer className="bg-[var(--background)] z-50 w-full flex items-center justify-center py-5 border-t-1 border-gray-300">
+      <div className="w-full max-w-7xl mx-7 flex lg:flex-row flex-col gap-y-4 items-center lg:justify-between gap-x-10">
+        <div className="flex flex-col gap-y-2 lg:items-start items-center">
           <div className="flex flex-row items-center gap-x-2">
             <span className="flex items-center justify-center text-xl">
               <FaHeart />
             </span>
             <span className="text-xl font-semibold">{t("title")}</span>
           </div>
-          <p className="">
+          <p className="lg:text-start text-center">
             {t("description")}
           </p>
         </div>
-        <div className="flex flex-col gap-y-4 items-end">
+        <div className="flex flex-col gap-y-4 lg:items-end items-center">
           <div className="flex items-center justify-center w-fit gap-x-5">
             <Link
               href={"/"}
@@ -38,7 +38,7 @@ const Footer = () => {
               <MdEmail />
             </Link>
           </div>
-          <div className="flex items-center justify-center w-fit gap-x-5">
+          <div className="flex items-center justify-center w-fit gap-x-5 flex-wrap">
             <Link href={"/privacy"} className="flex items-center justify-center">
               {t("privacyPolicy")}
             </Link>

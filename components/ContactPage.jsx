@@ -201,10 +201,10 @@ const ContactPage = () => {
           we'll respond as soon as possible.
         </p>
       </section>
-      <section className="flex flex-row gap-x-10 w-full mx-auto max-w-5xl">
+      <section className="flex lg:flex-row flex-col gap-y-10 gap-x-10 w-full mx-auto max-w-5xl">
         <form
           onSubmit={(e) => handleSubmit(e)}
-          className="flex flex-col gap-y-5 w-full max-w-lg shadow-md border-1 border-gray-300 p-10 rounded-xl"
+          className="flex flex-col gap-y-5 w-full lg:max-w-lg shadow-md border-1 border-gray-300 sm:p-10 p-5 rounded-xl"
         >
           <h2 className="text-2xl font-semibold text-center">
             Send Us a Message
@@ -292,7 +292,7 @@ const ContactPage = () => {
           </Button>
         </form>
         <div className="flex flex-col gap-y-10 w-full">
-          <div className="p-10 flex flex-col gap-y-5 shadow-md border-1 border-gray-300 rounded-xl">
+          <div className="sm:p-10 p-5 flex flex-col gap-y-5 shadow-md border-1 border-gray-300 rounded-xl">
             <h2 className="text-2xl font-semibold">Get in Touch</h2>
             <div className="flex items-start flex-row gap-x-5">
               <div className="flex items-center justify-center p-3 bg-[rgb(129,175,255)] text-2xl w-fit h-fit rounded-xl">
@@ -307,7 +307,7 @@ const ContactPage = () => {
               </div>
             </div>
           </div>
-          <div className="p-10 flex flex-col gap-y-5 shadow-md border-1 border-gray-300 rounded-xl">
+          <div className="sm:p-10 p-5 flex flex-col gap-y-5 shadow-md border-1 border-gray-300 rounded-xl">
             <h2 className="text-2xl font-semibold">FAQ</h2>
             <p className="text-gray-500">
               Before contacting us, you might want to check our frequently asked

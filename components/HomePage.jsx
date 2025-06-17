@@ -84,13 +84,13 @@ const HomePage = () => {
         <h1 className="mb-5 text-center text-4xl font-semibold">
           {t("howToCrop.title")}
         </h1>
-        <p className="text-xl text-gray-500">{t("howToCrop.description")}</p>
-        <div className="grid grid-cols-2 gap-14 items-stretch justify-center mt-10">
+        <p className="text-xl text-gray-500 text-center">{t("howToCrop.description")}</p>
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-14 items-stretch justify-center mt-10">
           {steps.map((step, index) => {
             return (
               <div
                 key={index}
-                className="flex flex-col gap-y-4 items-center justify-center text-center shadow-xl rounded-2xl border-1 border-gray-200 px-14 py-10"
+                className="flex flex-col sm:gap-y-4 gap-y-3 items-center justify-center text-center shadow-xl rounded-2xl border-1 border-gray-200 sm:px-14 px-10 sm:py-10 py-7"
               >
                 <div className="text-3xl bg-[rgb(129,175,255)] w-16 h-16 flex items-center justify-center rounded-full">
                   {step.icon}
@@ -107,7 +107,7 @@ const HomePage = () => {
         <h1 className="mb-5 text-center text-4xl font-semibold">
           {t("whyChooseUs.title")}
         </h1>
-        <p className="text-xl text-gray-500">
+        <p className="text-xl text-center text-gray-500">
           {t("whyChooseUs.description")}
         </p>
         <div className="flex flex-col gap-y-10 mt-10 w-full">
@@ -117,8 +117,8 @@ const HomePage = () => {
                 key={index}
                 className="shadow-xl rounded-xl border-1 border-gray-200 overflow-hidden w-full"
               >
-                <div className="flex flex-row gap-x-4 items-center border-l-5 border-gray-200 p-10 ">
-                  <div className="text-3xl bg-gray-100 w-16 h-16 flex items-center justify-center rounded-2xl">
+                <div className="flex sm:flex-row flex-col gap-y-4 gap-x-4 sm:items-center border-l-5 border-gray-200 sm:p-10 p-6">
+                  <div className="text-3xl bg-gray-100 w-fit h-fit p-4 flex items-center justify-center rounded-2xl">
                     {reason.icon}
                   </div>
                   <div className="flex flex-col gap-y-2">
@@ -138,7 +138,7 @@ const HomePage = () => {
         <h1 className="mb-5 text-center text-4xl font-semibold">
           {t("faqs.title")}
         </h1>
-        <p className="text-xl text-gray-500">
+        <p className="text-xl text-center text-gray-500">
           {t("faqs.description")}
         </p>
         <FAQAccordion />

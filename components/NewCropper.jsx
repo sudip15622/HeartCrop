@@ -16,8 +16,7 @@ import {
   FaStar,
 } from "react-icons/fa";
 import { BiSolidPolygon } from "react-icons/bi";
-import { IoMdDownload, IoMdStar, IoMdHeart } from "react-icons/io";
-import { MdRectangle, MdOutlineTipsAndUpdates } from "react-icons/md";
+import { IoMdDownload } from "react-icons/io";
 import { BsFillHeartbreakFill } from "react-icons/bs";
 import { FaHeartCrack } from "react-icons/fa6";
 import Mask from "./Mask";
@@ -32,6 +31,28 @@ const NewCropper = () => {
   const inputRef = useRef(null);
 
   const [currentShape, setCurrentShape] = useState("FaHeart");
+
+  const containerRef = useRef(null);
+  const [dimensions, setDimensions] = useState({ width: 800, height: 400 }); // default fallback
+
+  useEffect(() => {
+    const observer = new ResizeObserver((entries) => {
+      for (let entry of entries) {
+        const { width } = entry.contentRect;
+        const aspectRatio = 2; // 800 / 400 = 2
+        const height = width / aspectRatio;
+        setDimensions({ width, height });
+      }
+    });
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   const allShapes = [
     {
@@ -95,14 +116,14 @@ const NewCropper = () => {
   };
 
   return (
-    <div className="p-5 flex flex-row gap-x-5 w-full mx-auto shadow-2xl rounded-2xl">
-      <ul className="grid grid-cols-2 gap-y-4 gap-x-2 w-full max-w-[250px] border-r-1 border-gray-300 pr-5">
+    <div className="p-5 flex xl:flex-row flex-col gap-x-5 gap-y-5 w-full mx-auto shadow-2xl rounded-2xl">
+      <ul className="grid xl:grid-cols-2 lg:grid-cols-8 grid-cols-4 gap-y-4 gap-x-2 w-full xl:max-w-[250px] xl:border-r-1 xl:border-t-0 border-t-1 pt-5 border-gray-300 pr-5 order-2 xl:order-1">
         {allShapes.map((shape, index) => {
           return (
             <li
               key={index}
               onClick={() => setCurrentShape(shape.name)}
-              className={`flex items-center justify-center text-7xl cursor-pointer ${
+              className={`flex items-center justify-center md:text-7xl text-4xl cursor-pointer ${
                 shape.name === currentShape
                   ? "text-[rgb(25,118,210)]"
                   : "text-gray-400 hover:text-[rgb(129,175,255)]"
@@ -113,17 +134,17 @@ const NewCropper = () => {
           );
         })}
       </ul>
-      <div className="flex flex-col gap-y-5 w-full">
-        <div className="flex items-center justify-between gap-x-10 pb-5 border-b-1 border-gray-300">
-          <div className="flex flex-row gap-x-2 items-center text-gray-500">
+      <div className="flex flex-col gap-y-5 w-full order-1 xl:order-2">
+        <div className="flex sm:items-center sm:justify-end gap-x-10 pb-5 border-b-1 border-gray-300">
+          {/* <div className="flex flex-row gap-x-2 items-center text-gray-500">
             <span className="flex items-center justify-center text-xl">
               <MdOutlineTipsAndUpdates />
             </span>
             <span className="">
               {t("tips")}
             </span>
-          </div>
-          <div className="flex items-center justify-between gap-x-10">
+          </div> */}
+          <div className="flex sm:flex-row flex-col gap-y-4 items-center justify-between gap-x-10">
             <input
               ref={inputRef}
               type="file"
@@ -135,6 +156,7 @@ const NewCropper = () => {
               variant="contained"
               onClick={() => inputRef.current?.click()}
               startIcon={<FaCloudUploadAlt />}
+              style={{alignSelf: "start"}}
             >
               {imageSrc ? t("change") : t("upload")}
             </Button>
@@ -144,6 +166,7 @@ const NewCropper = () => {
                 onClick={() => handleDownload()}
                 startIcon={<IoMdDownload />}
                 color="success"
+                style={{alignSelf: "start"}}
               >
                 {t("download")}
               </Button>
@@ -151,7 +174,11 @@ const NewCropper = () => {
           </div>
         </div>
 
-        <div className="relative w-full max-w-[800px] h-[400px] mx-auto overflow-hidden rounded-xl">
+        <div
+          className="relative w-full max-w-[800px] mx-auto overflow-hidden rounded-xl"
+          style={{ aspectRatio: "2 / 1" }}
+          ref={containerRef}
+        >
           <Cropper
             image={imageSrc ? imageSrc : defaultImage}
             crop={crop}
@@ -164,12 +191,22 @@ const NewCropper = () => {
               setCroppedAreaPixels(croppedAreaPixels);
             }}
             cropShape="rect"
+            style={{ containerStyle: { width: "100%", height: "100%" } }}
           />
-          <div className="absolute top-0 left-0 pointer-events-none">
-            <Stage width={800} height={400}>
+          <div className="absolute top-0 left-0 pointer-events-none flex items-center justify-center">
+            <Stage width={dimensions.width} height={dimensions.height}>
               <Layer>
-                <Rect width={800} height={400} fill="rgb(0,0,0,0.4" />
-                <Mask width={800} height={400} shape={currentShape} />
+                <Rect
+                  width={dimensions.width}
+                  height={dimensions.height}
+                  fill="rgba(0,0,0,0.4)"
+                />
+                {/* Your custom Mask component */}
+                <Mask
+                  width={dimensions.width}
+                  height={dimensions.height}
+                  shape={currentShape}
+                />
               </Layer>
             </Stage>
           </div>
