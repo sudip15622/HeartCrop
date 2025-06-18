@@ -84,7 +84,9 @@ const HomePage = () => {
         <h1 className="mb-5 text-center text-4xl font-semibold">
           {t("howToCrop.title")}
         </h1>
-        <p className="text-xl text-gray-500 text-center">{t("howToCrop.description")}</p>
+        <p className="text-xl text-gray-500 text-center">
+          {t("howToCrop.description")}
+        </p>
         <div className="grid md:grid-cols-2 grid-cols-1 gap-14 items-stretch justify-center mt-10">
           {steps.map((step, index) => {
             return (

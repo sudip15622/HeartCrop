@@ -4,7 +4,7 @@ export const getCroppedMaskedImage = async (
   imageSrc,
   crop,
   shape = "FaHeart",
-  outputSize = 400
+  outputSize = 500
 ) => {
   const image = await loadImage(imageSrc);
 

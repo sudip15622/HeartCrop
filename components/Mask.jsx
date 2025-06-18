@@ -2,9 +2,15 @@
 import React from "react";
 import { Circle, Star, Rect, RegularPolygon, Shape } from "react-konva";
 
-const Mask = ({ width, height, shape }) => {
-  const centerX = width / 2;
-  const centerY = height / 2;
+const Mask = ({ width, height, x = 0, y = 0, shape }) => {
+  // const centerX = width / 2;
+  // const centerY = height / 2;
+  // const width = stageWidth;
+  // const height = stageHeight;
+  // const centerX = (stageWidth - imageWidth) / 2 + imageWidth / 2;
+  // const centerY = (stageHeight - imageHeight) / 2 + imageHeight / 2;
+  const centerX = x + width / 2;
+  const centerY = y + height / 2;
 
   switch (shape) {
     case "FaCircle":

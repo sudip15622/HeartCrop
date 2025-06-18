@@ -5,6 +5,7 @@ import Cropper from "react-easy-crop";
 import { Stage, Layer, Rect, Circle, Star } from "react-konva";
 import { getCroppedMaskedImage } from "@/utils/cropAndMask";
 import { useTranslations } from "next-intl";
+import useImage from "use-image";
 
 import {
   FaCloudUploadAlt,
@@ -34,6 +35,12 @@ const NewCropper = () => {
 
   const containerRef = useRef(null);
   const [dimensions, setDimensions] = useState({ width: 800, height: 400 }); // default fallback
+  const [imageDimensions, setImageDimensions] = useState({
+    width: 800,
+    height: 400,
+  }); // default fallback
+  const [imagePosition, setImagePosition] = useState({ x: 0, y: 0 }); // default fallback
+  const [uploadedImage] = useImage(imageSrc ? imageSrc : defaultImage);
 
   useEffect(() => {
     const observer = new ResizeObserver((entries) => {
@@ -53,6 +60,25 @@ const NewCropper = () => {
       observer.disconnect();
     };
   }, []);
+
+  useEffect(() => {
+    if (uploadedImage) {
+      const imgWidth = uploadedImage.width;
+      const imgHeight = uploadedImage.height;
+      const STAGE_WIDTH = dimensions.width;
+      const STAGE_HEIGHT = dimensions.height;
+
+      const scale = Math.min(STAGE_WIDTH / imgWidth, STAGE_HEIGHT / imgHeight);
+      const width = imgWidth * scale;
+      const height = imgHeight * scale;
+
+      const x = (STAGE_WIDTH - width) / 2; // center horizontally
+      const y = (STAGE_HEIGHT - height) / 2; // center vertically
+
+      setImageDimensions({ width, height });
+      setImagePosition({ x, y }); // <-- Add this
+    }
+  }, [uploadedImage, dimensions]);
 
   const allShapes = [
     {
@@ -92,8 +118,28 @@ const NewCropper = () => {
   const onFileChange = async (e) => {
     if (e.target.files && e.target.files.length > 0) {
       const file = e.target.files[0];
+
+      // 1. Validate file type
+      const validTypes = ["image/jpeg", "image/png", "image/webp", "image/gif"];
+      if (!validTypes.includes(file.type)) {
+        alert(
+          "Unsupported file type. Please upload an image (jpg, png, webp, gif)."
+        );
+        return;
+      }
+
+      // 2. Validate file size (e.g., max 5MB)
+      // const MAX_SIZE_MB = 5;
+      // if (file.size > MAX_SIZE_MB * 1024 * 1024) {
+      //   alert("File is too large. Maximum allowed size is 5MB.");
+      //   return;
+      // }
+
+      // 3. If all is good, read file
       const reader = new FileReader();
-      reader.onload = () => setImageSrc(reader.result);
+      reader.onload = () => {
+        setImageSrc(reader.result);
+      };
       reader.readAsDataURL(file);
     }
   };
@@ -156,7 +202,7 @@ const NewCropper = () => {
               variant="contained"
               onClick={() => inputRef.current?.click()}
               startIcon={<FaCloudUploadAlt />}
-              style={{alignSelf: "start"}}
+              style={{ alignSelf: "start" }}
             >
               {imageSrc ? t("change") : t("upload")}
             </Button>
@@ -166,7 +212,7 @@ const NewCropper = () => {
                 onClick={() => handleDownload()}
                 startIcon={<IoMdDownload />}
                 color="success"
-                style={{alignSelf: "start"}}
+                style={{ alignSelf: "start" }}
               >
                 {t("download")}
               </Button>
@@ -203,8 +249,10 @@ const NewCropper = () => {
                 />
                 {/* Your custom Mask component */}
                 <Mask
-                  width={dimensions.width}
-                  height={dimensions.height}
+                  width={imageDimensions.width}
+                  height={imageDimensions.height}
+                  x={imagePosition.x}
+                  y={imagePosition.y}
                   shape={currentShape}
                 />
               </Layer>
