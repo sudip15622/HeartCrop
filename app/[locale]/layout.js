@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
-import {getTranslations} from 'next-intl/server';
+import { getTranslations } from "next-intl/server";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({
@@ -13,12 +13,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export async function generateMetadata({params}) {
-  const {locale} = await params;
-  const t = await getTranslations({locale, namespace: 'Metadata'});
- 
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Metadata" });
+
   return {
-    title: t('title')
+    title: t("title"),
   };
 }
 
@@ -28,8 +28,30 @@ export default async function LocaleLayout({ children, params }) {
     notFound();
   }
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "HeartCrop",
+    operatingSystem: "Web",
+    applicationCategory: "ImageEditor",
+    url: "https://heartcrop.netlify.app", // ✅ update to your domain later
+    description: "HeartCrop is a free online image cropping tool.",
+    publisher: {
+      "@type": "Organization",
+      name: "HeartCrop",
+    },
+  };
+
   return (
     <html lang={locale}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#ffffff" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

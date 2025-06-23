@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://heartcrop.netlify.app
+
+# Sitemaps
+Sitemap: https://heartcrop.netlify.app/sitemap.xml

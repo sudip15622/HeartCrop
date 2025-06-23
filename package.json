@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postbuild": "next-sitemap --config next-sitemap.config.mjs"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -16,6 +17,7 @@
     "konva": "^9.3.20",
     "next": "15.3.3",
     "next-intl": "^4.1.0",
+    "next-sitemap": "^4.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-easy-crop": "^5.4.2",
