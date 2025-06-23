@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({
@@ -33,6 +33,8 @@ export default async function LocaleLayout({ children, params }) {
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
+
+  setRequestLocale(locale);
 
   const jsonLd = {
     "@context": "https://schema.org",

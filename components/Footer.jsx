@@ -1,13 +1,14 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 import { FaHeart, FaHome } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
   const t = useTranslations("Footer");
+  const locale = useLocale();
 
   return (
     <footer className="bg-[var(--background)] z-50 w-full flex items-center justify-center py-5 border-t-1 border-gray-300">
@@ -19,14 +20,12 @@ const Footer = () => {
             </span>
             <span className="text-xl font-semibold">{t("title")}</span>
           </div>
-          <p className="lg:text-start text-center">
-            {t("description")}
-          </p>
+          <p className="lg:text-start text-center">{t("description")}</p>
         </div>
         <div className="flex flex-col gap-y-4 lg:items-end items-center">
           <div className="flex items-center justify-center w-fit gap-x-5">
             <Link
-              href={"/"}
+              href={`/${locale}`}
               className="flex items-center justify-center text-2xl"
             >
               <FaHome />
@@ -39,13 +38,22 @@ const Footer = () => {
             </Link>
           </div>
           <div className="flex items-center justify-center w-fit gap-x-5 flex-wrap">
-            <Link href={"/privacy"} className="flex items-center justify-center">
+            <Link
+              href={`/${locale}/privacy`}
+              className="flex items-center justify-center"
+            >
               {t("privacyPolicy")}
             </Link>
-            <Link href={"/terms"} className="flex items-center justify-center">
+            <Link
+              href={`/${locale}/terms`}
+              className="flex items-center justify-center"
+            >
               {t("termsOfUse")}
             </Link>
-            <Link href={"/contact"} className="flex items-center justify-center">
+            <Link
+              href={`/${locale}/contact`}
+              className="flex items-center justify-center"
+            >
               {t("contactUs")}
             </Link>
           </div>

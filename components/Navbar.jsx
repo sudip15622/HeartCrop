@@ -2,30 +2,30 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 import { IoMdCheckmark } from "react-icons/io";
 import { FaHeart, FaCaretDown } from "react-icons/fa";
 
 const Navbar = () => {
   const t = useTranslations("Navbar");
+  const locale = useLocale();
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
   const dropDownRef = useRef(null);
 
   useEffect(() => {
-        function handleClickOutside(event) {
-            if (dropDownRef.current && !dropDownRef.current.contains(event.target)) {
-                setIsOpen(false)
-            }
-        }
-        document.addEventListener('mousedown', handleClickOutside);
+    function handleClickOutside(event) {
+      if (dropDownRef.current && !dropDownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
 
-        return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
-        };
-
-    }, [isOpen]);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
 
   // Language codes only, names will be translated below
   const languages = [
@@ -44,7 +44,7 @@ const Navbar = () => {
     languages[0];
 
   const redirectedPathName = (locale) => {
-    if (!pathname) return "/";
+    if (!pathname) return `/${locale}`;
     const segments = pathname.split("/");
     segments[1] = locale;
     return segments.join("/");
@@ -53,7 +53,10 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 left-0 bg-[var(--background)] z-50 w-full flex items-center justify-center shadow-md">
       <div className="w-full max-w-7xl mx-7 my-4 flex flex-row items-center justify-between">
-        <Link href={"/"} className="flex flex-row items-center gap-x-2"> 
+        <Link
+          href={`/${locale}`}
+          className="flex flex-row items-center gap-x-2"
+        >
           <span className="flex items-center justify-center text-xl">
             <FaHeart />
           </span>
