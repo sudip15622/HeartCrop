@@ -35,7 +35,7 @@ export default async function LocaleLayout({ children, params }) {
     operatingSystem: "Web",
     applicationCategory: "ImageEditor",
     url: "https://heartcrop.netlify.app", // ✅ update to your domain later
-    description: "HeartCrop is a free online image cropping tool.",
+    description: "HeartCrop is online image cropper where you can crop any images to your desired shapes like, heart, circle, square, star, and soon. Extensions like png, jpg, jpeg, all are supported in our platform.",
     publisher: {
       "@type": "Organization",
       name: "HeartCrop",
