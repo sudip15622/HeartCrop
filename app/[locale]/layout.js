@@ -13,6 +13,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export async function generateStaticParams() {
+  return routing.locales.map((locale) => ({
+    locale,
+  }));
+}
+
 export async function generateMetadata({ params }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Metadata" });
@@ -35,7 +41,8 @@ export default async function LocaleLayout({ children, params }) {
     operatingSystem: "Web",
     applicationCategory: "ImageEditor",
     url: "https://heartcrop.netlify.app", // ✅ update to your domain later
-    description: "HeartCrop is online image cropper where you can crop any images to your desired shapes like, heart, circle, square, star, and soon. Extensions like png, jpg, jpeg, all are supported in our platform.",
+    description:
+      "HeartCrop is online image cropper where you can crop any images to your desired shapes like, heart, circle, square, star, and soon. Extensions like png, jpg, jpeg, all are supported in our platform.",
     publisher: {
       "@type": "Organization",
       name: "HeartCrop",
