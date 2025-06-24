@@ -54,6 +54,7 @@ export default async function LocaleLayout({ children, params }) {
   return (
     <html lang={locale}>
       <head>
+        <meta name="google" content="notranslate" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
