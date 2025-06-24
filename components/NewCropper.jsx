@@ -221,7 +221,7 @@ const NewCropper = () => {
         </div>
 
         <div
-          className="relative w-full max-w-[800px] mx-auto overflow-hidden rounded-xl"
+          className="relative w-full max-w-[800px] mx-auto overflow-hidden rounded-xl hide-crop-shape"
           style={{ aspectRatio: "2 / 1" }}
           ref={containerRef}
         >
@@ -245,9 +245,8 @@ const NewCropper = () => {
                 <Rect
                   width={dimensions.width}
                   height={dimensions.height}
-                  fill="rgba(0,0,0,0.4)"
+                  fill="rgba(0,0,0,0.5)"
                 />
-                {/* Your custom Mask component */}
                 <Mask
                   width={imageDimensions.width}
                   height={imageDimensions.height}

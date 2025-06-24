@@ -56,3 +56,13 @@ button {
   cursor: pointer;
   outline: none;
 }
+
+.hide-crop-shape .reactEasyCrop_CropArea {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.hide-crop-shape .reactEasyCrop_Container::before {
+  background: transparent !important;
+}
