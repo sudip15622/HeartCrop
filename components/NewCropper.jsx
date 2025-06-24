@@ -46,8 +46,7 @@ const NewCropper = () => {
     const observer = new ResizeObserver((entries) => {
       for (let entry of entries) {
         const { width } = entry.contentRect;
-        const aspectRatio = 2; // 800 / 400 = 2
-        const height = width / aspectRatio;
+        const height = 400;
         setDimensions({ width, height });
       }
     });
@@ -221,8 +220,8 @@ const NewCropper = () => {
         </div>
 
         <div
-          className="relative w-full max-w-[800px] mx-auto overflow-hidden rounded-xl hide-crop-shape"
-          style={{ aspectRatio: "2 / 1" }}
+          className="relative w-full h-[400px] max-w-[800px] mx-auto overflow-hidden rounded-xl hide-crop-shape"
+          // style={{ aspectRatio: "2 / 1" }}
           ref={containerRef}
         >
           <Cropper
