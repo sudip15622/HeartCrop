@@ -127,13 +127,6 @@ const NewCropper = () => {
         return;
       }
 
-      // 2. Validate file size (e.g., max 5MB)
-      // const MAX_SIZE_MB = 5;
-      // if (file.size > MAX_SIZE_MB * 1024 * 1024) {
-      //   alert("File is too large. Maximum allowed size is 5MB.");
-      //   return;
-      // }
-
       // 3. If all is good, read file
       const reader = new FileReader();
       reader.onload = () => {
@@ -181,14 +174,6 @@ const NewCropper = () => {
       </ul>
       <div className="flex flex-col gap-y-5 w-full order-1 xl:order-2">
         <div className="flex sm:items-center sm:justify-end gap-x-10 pb-5 border-b-1 border-gray-300">
-          {/* <div className="flex flex-row gap-x-2 items-center text-gray-500">
-            <span className="flex items-center justify-center text-xl">
-              <MdOutlineTipsAndUpdates />
-            </span>
-            <span className="">
-              {t("tips")}
-            </span>
-          </div> */}
           <div className="flex sm:flex-row flex-col gap-y-4 items-center justify-between gap-x-10">
             <input
               ref={inputRef}
@@ -221,7 +206,6 @@ const NewCropper = () => {
 
         <div
           className="relative w-full h-[400px] max-w-[800px] mx-auto overflow-hidden rounded-xl hide-crop-shape"
-          // style={{ aspectRatio: "2 / 1" }}
           ref={containerRef}
         >
           <Cropper
@@ -265,7 +249,6 @@ const NewCropper = () => {
               <span>{zoom.toFixed(2)}x</span>
             </div>
             <Slider
-              //   valueLabelDisplay="auto"
               value={zoom}
               min={1}
               max={3}

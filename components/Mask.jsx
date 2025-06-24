@@ -45,12 +45,13 @@ const Mask = ({ width, height, x = 0, y = 0, shape }) => {
       );
 
     case "FaSquareFull":
+      const side = Math.min(width, height); // perfect square side length
       return (
         <Rect
-          x={centerX / 2}
-          y={0}
-          width={height}
-          height={height}
+          x={centerX - side / 2} // center horizontally
+          y={centerY - side / 2} // center vertically
+          width={side}
+          height={side}
           fill="black"
           stroke="white"
           strokeWidth={2}
